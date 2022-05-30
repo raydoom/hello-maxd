@@ -11,7 +11,13 @@
 
 ### 使用方式
 
-没有默认的uuid，必须填入uuid
+访问uuidgenerator生成uuid
+
+```
+https://www.uuidgenerator.net/
+```
+
+启动容器（没有默认的uuid，必须填入uuid）
 
 ```
 docker run -d --name v2ray-ws-docker -p 443:443 -p 80:80 -e uuid=[UUID] raydoom/v2ray-ws-docker
