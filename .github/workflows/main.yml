@@ -2,7 +2,7 @@ name: docker-ci
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build-and-deploy-image:
     runs-on: ubuntu-latest
