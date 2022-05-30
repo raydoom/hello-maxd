@@ -1,0 +1,53 @@
+{
+	"log": {
+		"access": "/dev/null",
+		"error": "/dev/null",
+		"loglevel": "warning"
+	},
+	"inbounds": [{
+			"port": 1080,
+			"listen": "0.0.0.0",
+			"protocol": "vmess",
+			"settings": {
+				"clients": [{
+					"id": "uuid",
+					"alterId": 0
+				}]
+			},
+			"streamSettings": {
+				"network": "ws",
+				"wsSettings": {
+					"path": "/vmess"
+				}
+			}
+		},
+		{
+			"port": 1081,
+			"listen": "0.0.0.0",
+			"protocol": "vless",
+			"settings": {
+				"clients": [{
+					"id": "uuid"
+				}],
+				"decryption": "none"
+			},
+			"streamSettings": {
+				"network": "ws",
+				"wsSettings": {
+					"path": "/vless"
+				}
+			}
+		}
+	],
+	"outbounds": [{
+		"protocol": "freedom",
+		"settings": {}
+	}],
+	"dns": {
+		"server": [
+			"8.8.8.8",
+			"8.8.4.4",
+			"localhost"
+		]
+	}
+}
