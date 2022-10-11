@@ -1,4 +1,4 @@
-FROM v2fly/v2fly-core
+FROM v2fly/v2fly-core:v4.45.2
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 RUN apk add nginx
 ADD auto-generate-cert.sh /opt/sh/
