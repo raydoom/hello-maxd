@@ -6,4 +6,6 @@ ADD start.sh /opt/sh/
 ADD nginx/default.conf /etc/nginx/http.d/
 ADD nginx/html /etc/nginx/html
 ADD v2ray/config.json /etc/v2ray/config.json
+EXPOSE 80
+EXPOSE 443
 CMD sh /opt/sh/start.sh
