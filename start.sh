@@ -10,4 +10,5 @@ nginx
 # start v2ray
 sed -i "s/uuid/${UUID}/g" /etc/v2ray/config.json
 nohup v2ray --config /etc/v2ray/config.json > /var/log/v2ray.log 2>&1 &
+touch /var/log/v2ray.log
 tail -f /var/log/v2ray.log
