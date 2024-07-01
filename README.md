@@ -20,7 +20,7 @@ https://www.uuidgenerator.net/
 启动容器（没有默认的uuid，必须填入uuid）
 
 ```
-docker run -d --name v2ray-ws-docker -p 443:443 -p 80:80 -e uuid=[UUID] raydoom/v2ray-ws-docker
+docker run -d --restart=unless-stopped --name v2ray-ws-docker -p 443:443 -p 80:80 -e UUID=[UUID] raydoom/v2ray-ws-docker
 ```
 
 客户端配置
