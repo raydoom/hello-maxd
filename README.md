@@ -32,7 +32,7 @@ docker run -d --restart=unless-stopped --name v2ray-ws-docker -p 443:443 -p 80:8
 UUID：
 额外ID(alterId): 0
 传输协议：WebSocket 或 ws
-WebSocket 路径：/vless 或 /vmess
+WebSocket 路径：/m 或 /l (/m表示vmess，/l表示vless)
 伪装域名(host): localhost.localdomain
 传输层安全：tls
 skip-cert-verify: true
