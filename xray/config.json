@@ -13,7 +13,7 @@
         "security": "none",
         "xhttpSettings": {
           "path": "/l/",
-          "mode": "packet-up",
+          "mode": "packet-up"
         }
       }
     }
