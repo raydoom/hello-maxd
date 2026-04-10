@@ -1,11 +1,11 @@
-## v2ray-ws-docker
+## xray-xhttp
 
 ### 项目简介
 
 使用docker，一键部署v2ray服务器
 
 - 自动生成自签名证书（在容器启动阶段）
-- 从上游`v2fly/v2fly-core`构建
+- 从上游`teddysun/xray`构建
 - 使用nginx服务器
 - 内置首页（演示博客，使用hexo的静态页面，用于......）
 
@@ -20,7 +20,7 @@ https://www.uuidgenerator.net/
 启动容器（没有默认的uuid，必须填入uuid）
 
 ```
-docker run -d --restart=unless-stopped --name v2ray-ws-docker -p 443:443 -p 80:80 -e UUID=[UUID] raydoom/v2ray-ws-docker
+docker run -d --restart=unless-stopped --name xray-xhttp -p 443:443 -p 80:80 -e UUID=[UUID] raydoom/xray-xhttp
 ```
 
 客户端配置
@@ -28,14 +28,15 @@ docker run -d --restart=unless-stopped --name v2ray-ws-docker -p 443:443 -p 80:8
 ```
 地址：服务器ip地址或域名
 端口：443
-协议：vless 或 vmess
+协议：vless
 UUID：
-额外ID(alterId): 0
-传输协议：WebSocket 或 ws
-WebSocket 路径：/m 或 /l (/m表示vmess，/l表示vless)
-伪装域名(host): localhost.localdomain
-传输层安全：tls
-skip-cert-verify: true
-跳过证书验证(allowInsecure): true
+udp: true
+tls: true
+network: xhttp
+xhttp-opts:
+  path: "/l"
+  host: localhost.localdomain
+  mode: packet-up
+  client-fingerprint: chrome
 ```
 
