@@ -39,5 +39,5 @@ jobs:
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
           tags: |
-            raydoom/v2ray-ws-docker:latest
-            raydoom/v2ray-ws-docker:${{ github.sha }}
+            raydoom/xray-xhttp:latest
+            raydoom/xray-xhttp:${{ github.sha }}

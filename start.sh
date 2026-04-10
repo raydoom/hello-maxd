@@ -8,7 +8,7 @@ cp -r /opt/sh/localhost.localdomain/* /etc/nginx/http.d/certs
 nginx
 
 # start v2ray
-sed -i "s/uuid/${UUID}/g" /etc/v2ray/config.json
+sed -i "s/uuid/${UUID}/g" /etc/xray/config.json
 nohup v2ray --config /etc/v2ray/config.json > /var/log/v2ray.log 2>&1 &
 touch /var/log/v2ray.log
 tail -f /var/log/v2ray.log

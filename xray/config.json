@@ -1,0 +1,22 @@
+{
+  "inbounds": [
+    {
+      "port": 8081,
+      "listen": "0.0.0.0",
+      "protocol": "vless",
+      "settings": {
+        "clients": [{ "id": "aafd2d1d-ee55-4d17-8472-90f6192aff39" }],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "none",
+        "xhttpSettings": {
+          "path": "/l",
+          "mode": "packet-up",
+          "host": "localhost.localdomain"
+        }
+      }
+    }
+  ]
+}
